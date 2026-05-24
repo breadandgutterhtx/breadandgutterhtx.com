@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bread & Gutter LLC</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#0a1624;
+color:white;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+header{
+background:rgba(5,11,20,.95);
+backdrop-filter:blur(8px);
+padding:20px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.logo img{
+height:120px;
+width:auto;
+border-radius:18px;
+margin-bottom:12px;
+box-shadow:0 8px 25px rgba(0,0,0,.4);
+}
+
+.logo h1{
+font-size:42px;
+letter-spacing:1px;
+}
+
+.logo p{
+color:#33d1c6;
+font-size:20px;
+margin-top:4px;
+}
+
+nav{
+margin-top:18px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+nav a{
+color:#33d1c6;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:white;
+}
+
+.hero{
+padding:140px 20px;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1800&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+border-bottom-left-radius:35px;
+border-bottom-right-radius:35px;
+}
+
+.hero h2{
+font-size:64px;
+max-width:950px;
+margin:auto;
+line-height:1.1;
+}
+
+.hero p{
+font-size:24px;
+margin-top:20px;
+color:#33d1c6;
+}
+
+.btn{
+display:inline-block;
+margin-top:32px;
+background:#33d1c6;
+color:#08111d;
+padding:16px 30px;
+border-radius:999px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(51,209,198,.35);
+}
+
+.section{
+padding:90px 20px;
+max-width:1250px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:48px;
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:28px;
+}
+
+.card{
+background:#132338;
+padding:32px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+color:#33d1c6;
+margin-bottom:12px;
+font-size:24px;
+}
+
+.gallery-card{
+overflow:hidden;
+border-radius:24px;
+background:#132338;
+}
+
+.gallery-card img{
+height:280px;
+width:100%;
+object-fit:cover;
+transition:transform .4s ease;
+}
+
+.gallery-card:hover img{
+transform:scale(1.04);
+}
+
+.review{
+background:#132338;
+padding:30px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.review strong{
+display:block;
+margin-top:15px;
+color:#33d1c6;
+}
+
+.contact{
+background:#050b14;
+border-top-left-radius:35px;
+border-top-right-radius:35px;
+padding:90px 20px;
+text-align:center;
+}
+
+.contact form{
+max-width:700px;
+margin:auto;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:16px;
+margin-bottom:16px;
+border:none;
+border-radius:16px;
+background:#132338;
+color:white;
+font-size:16px;
+}
+
+.contact button{
+background:#33d1c6;
+color:#08111d;
+padding:16px 28px;
+border:none;
+border-radius:999px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.contact button:hover{
+transform:translateY(-3px);
+}
+
+.socials{
+margin-top:20px;
+font-size:22px;
+color:#33d1c6;
+}
+
+.floating{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#33d1c6;
+color:#08111d;
+padding:15px 22px;
+border-radius:999px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#000;
+color:#888;
+}
+
+.service-area{
+margin-top:20px;
+text-align:center;
+color:#33d1c6;
+font-size:20px;
+}
+
+@media(max-width:768px){
+
+.hero h2{
+font-size:42px;
+}
+
+.section-title{
+font-size:38px;
+}
+
+.logo h1{
+font-size:32px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="YOUR-LOGO.jpg" alt="Bread & Gutter Logo">
+
+<h1>BREAD & GUTTER LLC</h1>
+<p>Dry Humor, Wet Protection.</p>
+</div>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Protect Your Home From Texas Storm Damage</h2>
+
+<p>Professional Gutters • Gutter Guards • Cleaning • Repairs</p>
+
+<a href="#contact" class="btn">Get Free Estimate</a>
+
+</section>
+
+<section class="section" id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Seamless Gutters</h3>
+<p>Custom-fit seamless gutter systems designed for maximum drainage and curb appeal.</p>
+</div>
+
+<div class="card">
+<h3>Gutter Guards</h3>
+<p>Reduce clogs and overflow while protecting your home year-round.</p>
+</div>
+
+<div class="card">
+<h3>Gutters + Guards</h3>
+<p>The complete low-maintenance protection package for homeowners.</p>
+</div>
+
+<div class="card">
+<h3>Gutter Cleaning</h3>
+<p>Fast local cleanings that keep water flowing where it belongs.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="gallery">
+
+<h2 class="section-title">Before & After Projects</h2>
+
+<div class="grid">
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="gallery-card">
+<img src="https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="reviews">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="grid">
+
+<div class="review">
+★★★★★
+<p>“Great communication, quick install, and everything looks amazing.”</p>
+<strong>— James R., Magnolia TX</strong>
+</div>
+
+<div class="review">
+★★★★★
+<p>“Professional crew and affordable pricing. Highly recommend Bread & Gutter.”</p>
+<strong>— Sarah M., The Woodlands TX</strong>
+</div>
+
+<div class="review">
+★★★★★
+<p>“Our gutters survived the storm perfectly. Very happy with the results.”</p>
+<strong>— David T., Conroe TX</strong>
+</div>
+
+<div class="review">
+★★★★★
+<p>“The gutter guards work perfectly and cleanup was spotless after installation.”</p>
+<strong>— Amanda L., Spring TX</strong>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">Request Your Free Estimate</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="text" placeholder="Phone Number">
+
+<input type="email" placeholder="Email Address">
+
+<textarea rows="5" placeholder="Tell us about your project"></textarea>
+
+<button type="submit">Submit Request</button>
+
+</form>
+
+<h3 style="margin-top:35px;">Call or Text: 509-863-1816</h3>
+
+<p style="margin-top:10px;">Breadandgutterhtx@gmail.com</p>
+
+<div class="socials">
+Facebook • Instagram • TikTok
+</div>
+
+</section>
+
+<footer>
+© 2026 Bread & Gutter LLC • Dry Humor, Wet Protection.
+</footer>
+
+<a class="floating" href="tel:5098631816">📞 Call Now</a>
+
+</body>
+</html>
